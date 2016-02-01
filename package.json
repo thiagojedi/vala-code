@@ -1,0 +1,26 @@
+{
+	"name": "vala",
+	"displayName": "Vala Code",
+	"description": "Vala Language Colorization for Visual Studio Code",
+	"version": "0.0.1",
+	"publisher": "thiagoabreu",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Languages"
+	],
+	"contributes": {
+		"languages": [{
+			"id": "vala",
+			"aliases": ["Vala", "vala"],
+			"extensions": [".vala",".vapi"],
+			"configuration": "./vala.configuration.json"
+		}],
+		"grammars": [{
+			"language": "vala",
+			"scopeName": "source.vala",
+			"path": "./syntaxes/vala.tmLanguage"
+		}]
+	}
+}
