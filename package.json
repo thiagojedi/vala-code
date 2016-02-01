@@ -7,20 +7,39 @@
 	"engines": {
 		"vscode": "^0.10.1"
 	},
+	"galleryBanner": {
+		"color": "#403757",
+		"theme": "dark"
+	},
+	"icon": "images/vala.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/thiagoabreu/vala-code.git"
+	},
 	"categories": [
 		"Languages"
 	],
 	"contributes": {
-		"languages": [{
-			"id": "vala",
-			"aliases": ["Vala", "vala"],
-			"extensions": [".vala",".vapi"],
-			"configuration": "./vala.configuration.json"
-		}],
-		"grammars": [{
-			"language": "vala",
-			"scopeName": "source.vala",
-			"path": "./syntaxes/vala.tmLanguage"
-		}]
+		"languages": [
+			{
+				"id": "vala",
+				"aliases": [
+					"Vala",
+					"vala"
+				],
+				"extensions": [
+					".vala",
+					".vapi"
+				],
+				"configuration": "./vala.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "vala",
+				"scopeName": "source.vala",
+				"path": "./syntaxes/vala.tmLanguage"
+			}
+		]
 	}
 }

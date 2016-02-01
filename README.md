@@ -13,3 +13,5 @@ If you wanna contribute, send a PR.
 ## Credits
 
 This extension is strongly based on [Vala-TMBundle](http://https://github.com/technosophos/Vala-TMBundle) by Matt Butcher.
+
+The image icon comes from the [Moka Icon Theme](https://github.com/moka-project/moka-icon-theme) by Sam Hewitt.
