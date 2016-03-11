@@ -17,7 +17,8 @@
 		"url": "https://github.com/thiagoabreu/vala-code.git"
 	},
 	"categories": [
-		"Languages"
+		"Languages",
+        "Snippets"
 	],
 	"contributes": {
 		"languages": [
@@ -40,6 +41,12 @@
 				"scopeName": "source.vala",
 				"path": "./syntaxes/vala.tmLanguage"
 			}
-		]
+		],
+        "snippets": [
+            {
+                "language": "vala",
+                "path": "./snippets/snippets.json"
+            }
+        ]   
 	}
 }

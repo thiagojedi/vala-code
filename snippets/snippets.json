@@ -1,0 +1,23 @@
+{
+    "GObject Class": {
+        "prefix": "class",
+        "body": [
+            "class ${name:ClassName} ${1:: GLib.Object} { ",
+            "\tpublic ${name:ClassName}() {",
+            "\t\t${0}",
+            "\t}",
+            "}"
+        ],
+        "description": "Defines a GObject Class, with a default public constructor."
+    },
+    "Compact Class": {
+        "prefix": "compact",
+        "body": [
+            "[Compact]",
+            "class ${name:ClassName} {",
+            "\t${0}",
+            "}"
+        ],
+        "description": "Defines a compact class, not derived from GLib.Object."
+    }
+}
