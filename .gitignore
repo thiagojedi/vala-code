@@ -1,2 +1,5 @@
 # Ignore vscode config folder
 .vscode/
+
+# Ignore extension packages
+*.vsix
