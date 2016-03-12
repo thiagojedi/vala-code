@@ -19,5 +19,70 @@
             "}"
         ],
         "description": "Defines a compact class, not derived from GLib.Object."
+    },
+    "While Loop": {
+        "prefix": "while",
+        "body": [
+            "while (${1:true}) {",
+            "\t${0}",
+            "}"
+        ],
+        "description": "While loop"
+    },
+    "Do While": {
+        "prefix": "do",
+        "body": [
+            "do {",
+            "\t${0}",
+            "} while (${1:true});"
+        ],
+        "description": "Do...While loop"
+    },
+    "For Loop": {
+        "prefix": "for",
+        "body": [
+            "for (int ${i:a} = 0; ${i:a} < ${b:length}; ${i:a}++) {",
+            "\t${0}",
+            "}"
+        ],
+        "description": "For loop"
+    },
+    "Foreach Loop": {
+        "prefix": "foreach",
+        "body": [
+            "foreach (var ${a:item} in ${collection}) {",
+            "\t${0}",
+            "}"
+        ],
+        "description": "Foreach loop"
+    },
+    "If Else": {
+        "prefix": "ifelse",
+        "body": [
+            "if (${1:true}) {",
+            "\t${0}",
+            "} else {",
+            "\t",
+            "}"
+        ],
+        "description": "If...Else conditional"
+    },
+    "Else If": {
+        "prefix": "elif",
+        "body": [
+            "} else if (${1}) {",
+            "${0}"
+        ],
+        "description": "Else if conditional"
+    },
+    "Switch Case": {
+        "prefix": "switch",
+        "body": [
+            "switch (${0}) {",
+               "default:",
+               "\tbreak;", 
+            "}"
+        ],
+        "description": "Switch statement"
     }
 }
