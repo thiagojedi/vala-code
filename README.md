@@ -1,15 +1,15 @@
 # Vala Code
-## Vala Language Colorization for Visual Studio Code 
+## Vala Language Support for Visual Studio Code 
 
-[x] Colorization
-[x] Code Snippets (WIP)
+- Colorization (since version 0.0.1)
+- Code Snippets (since version 0.1.0) - *Work In Progress* 
 
 If you wanna contribute, send a PR.
 
 ### Need Help
 
-[ ] Automatic code format (indent)
-[ ] Autocomplete (IntelliSense)
+- Automatic code format (indent)
+- Autocomplete (IntelliSense)
 
 ## Vala Language useful links
 
