@@ -84,5 +84,41 @@
             "}"
         ],
         "description": "Switch statement"
+    },
+    "Struct": {
+        "prefix": "struct",
+        "body": [
+            "struct ${1:StructName} {",
+               "\t${0}", 
+            "}"
+        ],
+        "description": "Defines a struct type"
+    },
+    "Interface": {
+        "prefix": "interface",
+        "body": [
+            "interface ${name:InterfaceName} { ",
+                "\t${0}",
+            "}"
+        ],
+        "description": "Defines a interface"
+    },
+    "Enumeration": {
+        "prefix": "enum",
+        "body": [
+            "enum ${name:EnumName} { ",
+                "\t${0:VALUE}",
+            "}"
+        ],
+        "description": "Defines a enumeration"
+    },
+    "Namespace": {
+        "prefix": "namespace",
+        "body": [
+            "namespace ${name:NamespaceName} { ",
+                "\t${0}",
+            "}"
+        ],
+        "description": "Defines a namespace"
     }
 }
