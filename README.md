@@ -1,15 +1,29 @@
 # Vala Code
 ## Vala Language Support for Visual Studio Code 
 
-- Colorization (since version 0.0.1)
-- Code Snippets (since version 0.1.0) - *Work In Progress* 
 
-If you wanna contribute, send a PR.
 
-### Need Help
+### 0.2.0
 
-- Automatic code format (indent)
-- Autocomplete (IntelliSense)
+- "Reindent Lines" working
+- Autoclosing brackets
+
+### 0.1.0
+
+- Code Snippets
+
+### 0.0.1
+
+- Colorization 
+
+## Contributing
+
+There are a few things I need help:
+
+- More code snippets
+- A Language Server (for better formating and autocomplete)
+
+If you wanna discuss any of them, feel free to send me a email or open a issue.
 
 ## Vala Language useful links
 
