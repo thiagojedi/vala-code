@@ -32,7 +32,7 @@
 					".vala",
 					".vapi"
 				],
-				"configuration": "./vala.configuration.json"
+				"configuration": "./language-configuration.json"
 			}
 		],
 		"grammars": [
