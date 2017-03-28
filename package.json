@@ -1,67 +1,69 @@
 {
-	"name": "vala",
-	"displayName": "Vala Code",
-	"description": "Vala Language Colorization for Visual Studio Code",
-	"version": "0.2.0",
-	"publisher": "thiagoabreu",
-	"engines": {
-		"vscode": "^0.10.1"
-	},
-	"galleryBanner": {
-		"color": "#403757",
-		"theme": "dark"
-	},
-	"icon": "images/vala.png",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/thiagoabreu/vala-code.git"
-	},
-	"categories": [
-		"Languages",
-		"Snippets"
-	],
-	"main": "./out/main.js",
-	"activationEvents": [
-		"onLanguage:vala"
-	],
-	"contributes": {
-		"languages": [
-			{
-				"id": "vala",
-				"aliases": [
-					"Vala",
-					"vala"
-				],
-				"extensions": [
-					".vala",
-					".vapi"
-				],
-				"configuration": "./language-configuration.json"
-			}
-		],
-		"grammars": [
-			{
-				"language": "vala",
-				"scopeName": "source.vala",
-				"path": "./syntaxes/vala.tmLanguage"
-			}
-		],
-		"snippets": [
-			{
-				"language": "vala",
-				"path": "./snippets/snippets.json"
-			}
-		]
-	},
-	"dependencies": {
-		"vscode-languageclient": "3.2.0"
-	},
-	"devDependencies": {
-		"vscode": "^1.1.0",
-		"typescript": "^2.2.2",
-		"@types/node": "^7.0.12"
-	},
-	"scripts": {
-		"vscode:prepublish": "tsc -p ./"
-	}
+  "name": "vala",
+  "displayName": "Vala Code",
+  "description": "Vala Language Colorization for Visual Studio Code",
+  "version": "0.2.0",
+  "publisher": "thiagoabreu",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^0.10.1"
+  },
+  "galleryBanner": {
+    "color": "#403757",
+    "theme": "dark"
+  },
+  "icon": "images/vala.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thiagoabreu/vala-code.git"
+  },
+  "categories": [
+    "Languages",
+    "Snippets"
+  ],
+  "main": "./out/main.js",
+  "activationEvents": [
+    "onLanguage:vala"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "vala",
+        "aliases": [
+          "Vala",
+          "vala"
+        ],
+        "extensions": [
+          ".vala",
+          ".vapi"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "vala",
+        "scopeName": "source.vala",
+        "path": "./syntaxes/vala.tmLanguage"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "vala",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  },
+  "dependencies": {
+    "vscode-languageclient": "3.2.0"
+  },
+  "devDependencies": {
+    "vscode": "^1.1.0",
+    "typescript": "^2.2.2",
+    "@types/node": "^7.0.12"
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p .",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  }
 }
