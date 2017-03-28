@@ -18,7 +18,11 @@
 	},
 	"categories": [
 		"Languages",
-        "Snippets"
+		"Snippets"
+	],
+	"main": "./out/main.js",
+	"activationEvents": [
+		"onLanguage:vala"
 	],
 	"contributes": {
 		"languages": [
@@ -42,11 +46,22 @@
 				"path": "./syntaxes/vala.tmLanguage"
 			}
 		],
-        "snippets": [
-            {
-                "language": "vala",
-                "path": "./snippets/snippets.json"
-            }
-        ]   
+		"snippets": [
+			{
+				"language": "vala",
+				"path": "./snippets/snippets.json"
+			}
+		]
+	},
+	"dependencies": {
+		"vscode-languageclient": "3.2.0"
+	},
+	"devDependencies": {
+		"vscode": "^1.1.0",
+		"typescript": "^2.2.2",
+		"@types/node": "^7.0.12"
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./"
 	}
 }
