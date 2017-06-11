@@ -2,8 +2,13 @@
   "name": "vala",
   "displayName": "Vala Code",
   "description": "Vala Language Colorization for Visual Studio Code",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "publisher": "thiagoabreu",
+  "author": {
+    "name": "Thiago 'Jedi' Abreu",
+    "email": "thiagoa7@gmail.com",
+    "url": "http://thiagoabreu.github.io/"
+  },
   "license": "MIT",
   "engines": {
     "vscode": "^0.10.1"
