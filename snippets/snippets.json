@@ -2,9 +2,9 @@
     "GObject Class": {
         "prefix": "class",
         "body": [
-            "class ${name:ClassName} ${1:: GLib.Object} { ",
-            "\tpublic ${name:ClassName}() {",
-            "\t\t${0}",
+            "class ${1:ClassName} ${2:: GLib.Object} { ",
+            "\tpublic ${1:ClassName}() {",
+            "\t\t$0",
             "\t}",
             "}"
         ],
@@ -14,8 +14,8 @@
         "prefix": "compact",
         "body": [
             "[Compact]",
-            "class ${name:ClassName} {",
-            "\t${0}",
+            "class ${1:ClassName} {",
+            "\t$0",
             "}"
         ],
         "description": "Defines a compact class, not derived from GLib.Object."
@@ -24,7 +24,7 @@
         "prefix": "while",
         "body": [
             "while (${1:true}) {",
-            "\t${0}",
+            "\t$0",
             "}"
         ],
         "description": "While loop"
@@ -33,7 +33,7 @@
         "prefix": "do",
         "body": [
             "do {",
-            "\t${0}",
+            "\t$0",
             "} while (${1:true});"
         ],
         "description": "Do...While loop"
@@ -41,8 +41,8 @@
     "For Loop": {
         "prefix": "for",
         "body": [
-            "for (int ${i:a} = 0; ${i:a} < ${b:length}; ${i:a}++) {",
-            "\t${0}",
+            "for (int ${1:a} = 0; ${1:a} < ${2:length}; ${1:a}++) {",
+            "\t$0",
             "}"
         ],
         "description": "For loop"
@@ -50,8 +50,8 @@
     "Foreach Loop": {
         "prefix": "foreach",
         "body": [
-            "foreach (var ${a:item} in ${collection}) {",
-            "\t${0}",
+            "foreach (var ${1:item} in ${2:collection}) {",
+            "\t$0",
             "}"
         ],
         "description": "Foreach loop"
@@ -60,7 +60,7 @@
         "prefix": "ifelse",
         "body": [
             "if (${1:true}) {",
-            "\t${0}",
+            "\t$0",
             "} else {",
             "\t",
             "}"
@@ -70,15 +70,15 @@
     "Else If": {
         "prefix": "elif",
         "body": [
-            "} else if (${1}) {",
-            "${0}"
+            "} else if ($1) {",
+            "$0"
         ],
         "description": "Else if conditional"
     },
     "Switch Case": {
         "prefix": "switch",
         "body": [
-            "switch (${0}) {",
+            "switch ($0) {",
                "default:",
                "\tbreak;", 
             "}"
@@ -89,7 +89,7 @@
         "prefix": "struct",
         "body": [
             "struct ${1:StructName} {",
-               "\t${0}", 
+               "\t$0", 
             "}"
         ],
         "description": "Defines a struct type"
@@ -97,8 +97,8 @@
     "Interface": {
         "prefix": "interface",
         "body": [
-            "interface ${name:InterfaceName} { ",
-                "\t${0}",
+            "interface ${1:InterfaceName} { ",
+                "\t$0",
             "}"
         ],
         "description": "Defines a interface"
@@ -106,7 +106,7 @@
     "Enumeration": {
         "prefix": "enum",
         "body": [
-            "enum ${name:EnumName} { ",
+            "enum ${1:EnumName} { ",
                 "\t${0:VALUE}",
             "}"
         ],
@@ -115,8 +115,8 @@
     "Namespace": {
         "prefix": "namespace",
         "body": [
-            "namespace ${name:NamespaceName} { ",
-                "\t${0}",
+            "namespace ${1:NamespaceName} { ",
+                "\t$0",
             "}"
         ],
         "description": "Defines a namespace"
