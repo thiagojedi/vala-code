@@ -3,7 +3,7 @@
 
 ### 0.2.1
 
-- Fix some colorization in literals (thanks [@LaurentTreguier](https://github.com/LaurentTreguier))
+- Fix some colorization in types (thanks [@LaurentTreguier](https://github.com/LaurentTreguier))
 - Fix snippets syntax warnings for VSCode 1.13
 
 ### 0.2.0
