@@ -1020,7 +1020,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\b(?:bool|byte|sbyte|char|decimal|double|float|int|uint|long|ulong|object|short|ushort|string|void|int8|int16|int32|int64|uint8|uint16|uint32|uint64)(\[\])*\b</string>
+					<string>\b(?:bool|double|float|unichar|char|uchar|int|uint|long|ulong|short|ushort|size_t|ssize_t|string|void|int8|int16|int32|int64|uint8|uint16|uint32|uint64)(\[\])*\b</string>
 					<key>name</key>
 					<string>storage.type.primitive.array.vala</string>
 				</dict>
@@ -1034,7 +1034,7 @@
 					<key>comment</key>
 					<string>var is not really a primitive, but acts like one in most cases</string>
 					<key>match</key>
-					<string>\b(?:var|bool|byte|sbyte|char|decimal|double|float|int|uint|long|ulong|object|short|ushort|string|void|signal|int8|int16|int32|int64|uint8|uint16|uint32|uint64)\b</string>
+					<string>\b(?:var|bool|double|float|unichar|char|uchar|int|uint|long|ulong|short|ushort|size_t|ssize_t|string|void|signal|int8|int16|int32|int64|uint8|uint16|uint32|uint64)\b</string>
 					<key>name</key>
 					<string>storage.type.primitive.vala</string>
 				</dict>
