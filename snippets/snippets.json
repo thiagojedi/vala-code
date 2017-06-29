@@ -120,5 +120,16 @@
             "}"
         ],
         "description": "Defines a namespace"
+    },
+    "Main": {
+        "prefix": "main",
+        "body": [
+            "public static int main(string[] args) {",
+                "\t$0",
+                "",
+                "\treturn 0;",
+            "}"
+        ],
+        "description": "Main function"
     }
 }
