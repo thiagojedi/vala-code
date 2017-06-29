@@ -2,7 +2,7 @@
   "name": "vala",
   "displayName": "Vala Code",
   "description": "Vala Language Colorization for Visual Studio Code",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "publisher": "thiagoabreu",
   "author": {
     "name": "Thiago 'Jedi' Abreu",
@@ -73,6 +73,11 @@
           "severity": 6,
           "message": 7
         }
+      }
+    ],
+    "breakpoints": [
+      {
+        "language": "vala"
       }
     ]
   },
