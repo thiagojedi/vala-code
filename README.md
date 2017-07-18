@@ -5,8 +5,11 @@
 
 There are a few things I need help:
 
-- More code snippets
-- A Language Server (for better formating and autocomplete)
+- More code snippets.
+
+- Language Server:
+
+    Preferably using `libvala` as most is already there. This is necessary for autocomplete and better formating.
 
 If you wanna discuss any of them, feel free to send me a email or open a issue.
 
