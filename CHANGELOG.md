@@ -1,3 +1,6 @@
+### 0.3.0
+
+- Added problem matcher for the valac compiler (thanks [@dltech](https://github.com/dlech))
 
 ### 0.2.1
 
