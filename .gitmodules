@@ -1,0 +1,3 @@
+[submodule "vala-language-server"]
+	path = vala-language-server
+	url = https://github.com/benwaffle/vala-language-server
