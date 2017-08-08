@@ -103,12 +103,12 @@
         ]
     },
     "dependencies": {
-        "vscode-languageclient": "3.2.0"
+        "vscode-languageclient": "^3.3.0"
     },
     "devDependencies": {
         "typescript": "^2.5.3",
         "vscode": "^1.1.5",
-        "@types/node": "^7.0.43"
+        "@types/node": "^8.0.19"
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",

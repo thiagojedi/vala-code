@@ -1,6 +1,19 @@
+import * as path from 'path'
+import { spawn } from 'child_process'
+
 import { ExtensionContext, languages, IndentAction } from 'vscode'
 
+import { ValaLanguageClient } from './client'
+
 export function activate(context: ExtensionContext) {
+    configureSimpleIndentation()
+
+    let client = new ValaLanguageClient(context)
+
+    context.subscriptions.push(client)
+}
+
+function configureSimpleIndentation() {
     languages.setLanguageConfiguration("vala", {
         indentationRules: {
             increaseIndentPattern: /^.*\{[^}"']*$/,
