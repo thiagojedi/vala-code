@@ -28,6 +28,13 @@
         "theme": "dark"
     },
     "icon": "images/vala.png",
+    "badges": [
+        {
+            "url": "https://img.shields.io/github/contributors/thiagoabreu/vala-code.svg",
+            "href": "https://github.com/thiagoabreu/vala-code/graphs/contributors",
+            "description": "Awesome people!"
+        }
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/thiagoabreu/vala-code.git"
