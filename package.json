@@ -68,21 +68,25 @@
                 "path": "./snippets/snippets.json"
             }
         ],
+        "problemPatterns": [
+            {
+                "name": "valac",
+                "regexp": "^(.*?):(\\d+)[:\\.](\\d+)(?:-(\\d+)\\.(\\d+))?:\\s+(warning|error):\\s+(.*)$",
+                "file": 1,
+                "line": 2,
+                "column": 3,
+                "endLine": 4,
+                "endColumn": 5,
+                "severity": 6,
+                "message": 7
+            }
+        ],
         "problemMatchers": [
             {
                 "name": "valac",
                 "owner": "vala",
                 "fileLocation": "absolute",
-                "pattern": {
-                    "regexp": "^(.*):(\\d+)\\.(\\d+)-(\\d+)\\.(\\d+):\\s+(warning|error):\\s+(.*)$",
-                    "file": 1,
-                    "line": 2,
-                    "column": 3,
-                    "endLine": 4,
-                    "endColumn": 5,
-                    "severity": 6,
-                    "message": 7
-                }
+                "pattern": "$valac"
             }
         ],
         "breakpoints": [
