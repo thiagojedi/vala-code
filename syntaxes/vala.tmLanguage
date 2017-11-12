@@ -675,7 +675,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(return|break|case|continue|default|do|while|for|foreach|switch|if|else|in|yield|get|set|value)\b</string>
+					<string>\b(return|break|case|continue|default|do|while|for|foreach|switch|if|else|in|yield|get|set|value|construct)\b</string>
 					<key>name</key>
 					<string>keyword.control.vala</string>
 				</dict>
