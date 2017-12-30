@@ -34,6 +34,7 @@ export class ValaLanguageClient {
             debug: {
                 command: serverModule,
                 options: {
+                    ...process.env,
                     env: {
                         G_MESSAGES_DEBUG: 'all',
                         JSONRPC_DEBUG: 1
