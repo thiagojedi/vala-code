@@ -620,6 +620,10 @@
 			<key>patterns</key>
 			<array>
 				<dict>
+					<key>include</key>
+					<string>#comments</string>
+				</dict>
+				<dict>
 					<key>begin</key>
 					<string>\w+</string>
 					<key>beginCaptures</key>
