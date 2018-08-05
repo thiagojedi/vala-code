@@ -40,7 +40,7 @@
         "url": "https://github.com/thiagoabreu/vala-code.git"
     },
     "categories": [
-        "Languages",
+        "Programming Languages",
         "Snippets"
     ],
     "main": "./out/main.js",
