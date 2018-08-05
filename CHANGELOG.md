@@ -1,3 +1,7 @@
+### 0.3.2
+
+- Fix highlighting of comments in enum declarations (thanks [@dlech](https://github.com/dlech))
+
 ### 0.3.1
 
 - Better problem matching pattern (thanks [@dlech](https://github.com/dlech))
