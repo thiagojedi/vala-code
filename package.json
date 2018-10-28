@@ -2,7 +2,7 @@
     "name": "vala",
     "displayName": "Vala Code",
     "description": "Vala Language Colorization for Visual Studio Code",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "publisher": "thiagoabreu",
     "author": {
         "name": "Thiago 'Jedi' Abreu",
@@ -40,7 +40,7 @@
         "url": "https://github.com/thiagoabreu/vala-code.git"
     },
     "categories": [
-        "Languages",
+        "Programming Languages",
         "Snippets"
     ],
     "main": "./out/main.js",
@@ -106,8 +106,9 @@
         "vscode-languageclient": "^3.4.2"
     },
     "devDependencies": {
+        "@types/node": "^7.0.43",
         "typescript": "^2.5.3",
-        "vscode": "^1.1.5",
+        "vscode": "^1.1.21",
         "@types/node": "^8.0.19"
     },
     "scripts": {
