@@ -1,20 +1,15 @@
 import {
-    Position,
     LanguageClient,
     LanguageClientOptions,
-    SettingMonitor,
     ServerOptions,
     TransportKind,
-    ClientCapabilities,
     RevealOutputChannelOn,
-    NotificationType0
 } from 'vscode-languageclient';
 
 import {
     ExtensionContext
 } from 'vscode'
 
-import { spawn } from 'child_process'
 import * as path from 'path'
 
 export class ValaLanguageClient {
@@ -27,7 +22,7 @@ export class ValaLanguageClient {
 
         let clientOptions: LanguageClientOptions = {
             documentSelector: ['vala'],
-            revealOutputChannelOn: RevealOutputChannelOn.Info            
+            revealOutputChannelOn: RevealOutputChannelOn.Info,
         };
 
         let serverOptions: ServerOptions = {
@@ -44,11 +39,11 @@ export class ValaLanguageClient {
                         JSONRPC_DEBUG: 1
                     }
                 },
-                transport: TransportKind.stdio
+                transport: TransportKind.stdio,
             }
         };
 
-        this.ls = new LanguageClient('Vala Language Server', serverOptions, clientOptions)
+        this.ls = new LanguageClient('vls', 'Vala Language Server', serverOptions, clientOptions)
 
         this.ls.start()
     }
