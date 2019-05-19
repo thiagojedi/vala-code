@@ -1,6 +1,10 @@
+### 0.3.3
+
+- Fix highlight of generics delimiters
+
 ### 0.3.2
 
-- Fix highlighting of comments in enum declarations (thanks [@dlech](https://github.com/dlech))
+- Fix highlight of comments in enum declarations (thanks [@dlech](https://github.com/dlech))
 
 ### 0.3.1
 

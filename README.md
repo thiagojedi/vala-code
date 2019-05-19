@@ -16,7 +16,8 @@ If you wanna discuss any of them, feel free to send me a email or open a issue.
 ## Vala Language useful links
 
 - Vala's Official Page: https://wiki.gnome.org/Projects/Vala
-- Valadoc: http://www.valadoc.org/
+- Coding in Vala with Visual Studio Code: https://wiki.gnome.org/Projects/Vala/Tools/VisualStudioCode
+- Valadoc: https://valadoc.org/
 
 ## Credits
 
