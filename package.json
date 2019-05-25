@@ -2,7 +2,7 @@
     "name": "vala",
     "displayName": "Vala Code",
     "description": "Vala Language Colorization for Visual Studio Code",
-    "version": "0.3.0",
+    "version": "0.3.3",
     "publisher": "thiagoabreu",
     "author": {
         "name": "Thiago 'Jedi' Abreu",
@@ -40,7 +40,7 @@
         "url": "https://github.com/thiagoabreu/vala-code.git"
     },
     "categories": [
-        "Languages",
+        "Programming Languages",
         "Snippets"
     ],
     "main": "./out/main.js",
@@ -75,21 +75,25 @@
                 "path": "./snippets/snippets.json"
             }
         ],
+        "problemPatterns": [
+            {
+                "name": "valac",
+                "regexp": "^(.*?):(\\d+)[:\\.](\\d+)(?:-(\\d+)\\.(\\d+))?:\\s+(warning|error):\\s+(.*)$",
+                "file": 1,
+                "line": 2,
+                "column": 3,
+                "endLine": 4,
+                "endColumn": 5,
+                "severity": 6,
+                "message": 7
+            }
+        ],
         "problemMatchers": [
             {
                 "name": "valac",
                 "owner": "vala",
                 "fileLocation": "absolute",
-                "pattern": {
-                    "regexp": "^(.*):(\\d+)\\.(\\d+)-(\\d+)\\.(\\d+):\\s+(warning|error):\\s+(.*)$",
-                    "file": 1,
-                    "line": 2,
-                    "column": 3,
-                    "endLine": 4,
-                    "endColumn": 5,
-                    "severity": 6,
-                    "message": 7
-                }
+                "pattern": "$valac"
             }
         ],
         "breakpoints": [
@@ -102,13 +106,14 @@
         "vscode-languageclient": "^3.3.0"
     },
     "devDependencies": {
-        "vscode": "^1.1.0",
-        "typescript": "^2.2.2",
-        "@types/node": "^8.0.19"
+        "typescript": "^2.5.3",
+        "vscode": "^1.1.5",
+        "@types/node": "^7.0.43"
     },
     "scripts": {
-        "vscode:prepublish": "tsc -p ./",
-        "compile": "tsc -watch -p ./",
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install"
     }
 }
