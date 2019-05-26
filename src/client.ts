@@ -1,33 +1,29 @@
 import {
-    Position,
     LanguageClient,
     LanguageClientOptions,
-    SettingMonitor,
     ServerOptions,
     TransportKind,
-    ClientCapabilities,
-    RevealOutputChannelOn,
-    NotificationType0
+    RevealOutputChannelOn
 } from 'vscode-languageclient';
 
 import {
     ExtensionContext
 } from 'vscode'
 
-import { spawn } from 'child_process'
 import * as path from 'path'
 
 export class ValaLanguageClient {
 
     ls: LanguageClient | null
-    
+
     constructor(context: ExtensionContext) {
 
         let serverModule = context.asAbsolutePath(path.join('vala-language-server', 'build', 'vala-language-server'));
+        // let gvlsModule = context.asAbsolutePath(path.join('gvls', 'build', 'src','lsp','org.gnome.GVls'));
 
         let clientOptions: LanguageClientOptions = {
             documentSelector: ['vala'],
-            revealOutputChannelOn: RevealOutputChannelOn.Info            
+            revealOutputChannelOn: RevealOutputChannelOn.Info
         };
 
         let serverOptions: ServerOptions = {
