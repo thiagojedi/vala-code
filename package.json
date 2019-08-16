@@ -100,7 +100,24 @@
             {
                 "language": "vala"
             }
-        ]
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "Vala Settings",
+            "properties": {
+                "vls.trace.server": {
+                    "scope": "window",
+                    "type": "string",
+                    "enum": [
+                        "off",
+                        "messages",
+                        "verbose"
+                    ],
+                    "default": "messages",
+                    "description": "Traces the communication between VS Code and the language server."
+                }
+            }
+        }
     },
     "dependencies": {
         "vscode-languageclient": "^5.2.1"
