@@ -2,23 +2,63 @@
     "GObject Class": {
         "prefix": "class",
         "body": [
-            "class ${1:ClassName} ${2:: GLib.Object} { ",
+            "class ${1:ClassName} : Object {",
             "\tpublic ${1:ClassName}() {",
             "\t\t$0",
             "\t}",
             "}"
         ],
-        "description": "Defines a GObject Class, with a default public constructor."
+        "description": "Defines a GObject class, with a default public constructor"
+    },
+    "GObject Public Class": {
+        "prefix": "public-class",
+        "body": [
+            "public class ${1:ClassName} : Object {",
+            "\tpublic ${1:ClassName}() {",
+            "\t\t$0",
+            "\t}",
+            "}"
+        ],
+        "description": "Defines a GObject public class, with a default public constructor"
+    },
+    "GObject Private Class": {
+        "prefix": "private-class",
+        "body": [
+            "private class ${1:ClassName} : Object {",
+            "\t${1:ClassName}() {",
+            "\t\t$0",
+            "\t}",
+            "}"
+        ],
+        "description": "Defines a GObject private class, with a default public constructor"
     },
     "Compact Class": {
-        "prefix": "compact",
+        "prefix": "class-compact",
         "body": [
-            "[Compact]",
             "class ${1:ClassName} {",
             "\t$0",
             "}"
         ],
-        "description": "Defines a compact class, not derived from GLib.Object."
+        "description": "Defines a compact class, not derived from GLib.Object"
+    },
+    "Inheritance Class": {
+    		"prefix": "class-inheritance",
+    		"body": [
+    			"class ${1:SubClass} : ${2: SuperClass} {",
+    			"\tpublic ${1:SubClass}() {",
+    			"\t\tbase();"
+    			"\t}"
+    			"}"
+    		],
+    		"description": "Defines a Class, with inheritance"
+    },
+    "Destructor": {
+    		"prefix": "destructor",
+    		"body": [
+    			"~${1:ClassName}() {",
+            "\t$0",
+            "}",
+    		],
     },
     "While Loop": {
         "prefix": "while",
@@ -41,7 +81,7 @@
     "For Loop": {
         "prefix": "for",
         "body": [
-            "for (int ${1:a} = 0; ${1:a} < ${2:length}; ${1:a}++) {",
+            "for (int ${1:i} = 0; ${1:i} < ${2:length}; ${1:i}++) {",
             "\t$0",
             "}"
         ],
@@ -124,12 +164,61 @@
     "Main": {
         "prefix": "main",
         "body": [
-            "public static int main(string[] args) {",
+            "static int main(string[] args) {",
                 "\t$0",
                 "",
                 "\treturn 0;",
             "}"
         ],
         "description": "Main function"
-    }
+    },
+    "Getter": {
+    		"prefix": "get",
+    		"body": [
+    			"public ${2:variable_type} ${1:property} {",
+    			"\tget { return _${1:property}; }",
+    			"}"
+    		],
+    		"description": "Create a Getter function. Use underscore prefix in your variable name to avoid name clash with property."
+    },
+    "Setter": {
+    		"prefix": "set",
+    		"body": [
+    			"public ${2:variable_type} ${1:property} {",
+    			"\tset { _${1:property} = value; }"
+    			"}"
+    		],
+    		"description": "Create a Setter function. Use underscore prefix in your variable name to avoid name clash with property."
+    },
+    "Getter and Setter": {
+    		"prefix": "get-set",
+    		"body": [
+    			"public ${2:variable_type} ${1:property} {",
+    			"\tget { return _${1:property}; }",
+    			"\tset { _${1:property} = value; }",
+    			"}"
+    		],
+    		"description": "Create a Getter and setter function. Use underscore prefix in your variable name to avoid name clash with property."
+    },
+    "Printf": {
+    		"prefix": "printf",
+    		"body": [
+    			"stdout.printf (\"$0\");",
+    		],
+    		"description": "Print formatted data to stdout"
+    },
+    "Read Console": {
+    		"prefix": "read-line",
+    		"body": [
+    			"stdin.read_line ();",
+    		],
+    		"description": "Read a single input line from stdin"
+    },
+    "Scan Console": {
+    		"prefix": "scan-console",
+    		"body": [
+    			"stdin.scanf (\"%${1:prefix}\", out ${2:variable});",
+    		],
+    		"description": "Scan a formatted input from stdin"
+    },
 }
