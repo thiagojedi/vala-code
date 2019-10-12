@@ -2,7 +2,7 @@
     "name": "vala",
     "displayName": "Vala Code",
     "description": "Vala Language Colorization for Visual Studio Code",
-    "version": "0.3.2",
+    "version": "0.3.5",
     "publisher": "thiagoabreu",
     "author": {
         "name": "Thiago 'Jedi' Abreu",
@@ -17,6 +17,10 @@
         {
             "name": "David Lechner",
             "url": "https://github.com/dlech"
+        },
+        {
+            "name": "Helder Bertoldo ",
+            "url": "https://github.com/btd1337"
         }
     ],
     "license": "MIT",

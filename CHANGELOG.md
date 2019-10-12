@@ -1,6 +1,18 @@
+### 0.3.5
+
+- Remove unused files
+
+### 0.3.4
+
+- Added more snippets (thanks [@btd1337](https://github.com/btd1337))
+
+### 0.3.3
+
+- Fix highlight of generics delimiters
+
 ### 0.3.2
 
-- Fix highlighting of comments in enum declarations (thanks [@dlech](https://github.com/dlech))
+- Fix highlight of comments in enum declarations (thanks [@dlech](https://github.com/dlech))
 
 ### 0.3.1
 
