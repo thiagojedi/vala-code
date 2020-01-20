@@ -119,6 +119,11 @@
                     ],
                     "default": "messages",
                     "description": "Traces the communication between VS Code and the language server."
+                },
+                "vls.languageServerPath": {
+                    "type": "string",
+                    "description": "Binary name or path to language server",
+                    "default": ""
                 }
             }
         }
