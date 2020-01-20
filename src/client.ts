@@ -7,19 +7,23 @@ import {
 } from 'vscode-languageclient';
 
 import {
-    ExtensionContext
+    ExtensionContext,
+    Uri,
+    workspace,
+    window,
 } from 'vscode'
 
 import * as path from 'path'
 
 export class ValaLanguageClient {
 
-    ls: LanguageClient | null
+    ls: LanguageClient | null = null
 
     constructor(context: ExtensionContext) {
 
-        let serverModule = context.asAbsolutePath(path.join('vala-language-server', 'build', 'vala-language-server'));
-        // let gvlsModule = context.asAbsolutePath(path.join('gvls', 'build', 'src','lsp','org.gnome.GVls'));
+        let serverModule = this.getLanguageServerPath()
+        if (serverModule == null)
+            return;
 
         let clientOptions: LanguageClientOptions = {
             documentSelector: ['vala'],
@@ -49,9 +53,21 @@ export class ValaLanguageClient {
         this.ls.start()
     }
 
-    dispose() {
-        this.ls!.stop()
+    getLanguageServerPath(): string | null {
+        let uri;
+        if (window.activeTextEditor) {
+            uri = window.activeTextEditor.document.uri;
+        } else {
+            uri = null;
+        }
+        return workspace.getConfiguration('vls', uri)['languageServerPath']
+    }
 
-        this.ls = null
+    dispose() {
+        if (this.ls) {
+            this.ls!.stop()
+
+            this.ls = null
+        }
     }
 }
