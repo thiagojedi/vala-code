@@ -26,7 +26,7 @@ export class ValaLanguageClient {
             return;
 
         let clientOptions: LanguageClientOptions = {
-            documentSelector: ['vala'],
+            documentSelector: ['vala', 'genie'],
             revealOutputChannelOn: RevealOutputChannelOn.Info
         };
 
