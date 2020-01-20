@@ -103,7 +103,7 @@
         ]
     },
     "dependencies": {
-        "vscode-languageclient": "^3.4.2"
+        "vscode-languageclient": "^5.1.1"
     },
     "devDependencies": {
         "typescript": "^3.4.5",
