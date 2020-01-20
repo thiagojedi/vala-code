@@ -21,8 +21,6 @@ export class ValaLanguageClient {
     constructor(context: ExtensionContext) {
 
         let serverModule = this.getLanguageServerPath()
-             || which.sync('vala-language-server', { nothrow: true })
-             || which.sync('gvls', { nothrow: true })
 
         if (serverModule == null)
             return;
@@ -62,7 +60,9 @@ export class ValaLanguageClient {
         } else {
             uri = null;
         }
-        return workspace.getConfiguration('vls', uri)['languageServerPath']
+        return workspace.getConfiguration('vls', uri).languageServerPath
+             || which.sync('vala-language-server', { nothrow: true })
+             || which.sync('gvls', { nothrow: true })
     }
 
     dispose() {
