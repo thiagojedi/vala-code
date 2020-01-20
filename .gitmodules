@@ -1,6 +1,0 @@
-[submodule "vala-language-server"]
-	path = vala-language-server
-	url = https://github.com/benwaffle/vala-language-server
-[submodule "gvls"]
-	path = gvls
-	url = https://gitlab.gnome.org/esodan/gvls
