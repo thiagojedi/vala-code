@@ -8,12 +8,11 @@ import {
 
 import {
     ExtensionContext,
-    Uri,
     workspace,
     window,
 } from 'vscode'
 
-import * as path from 'path'
+import * as which from 'which'
 
 export class ValaLanguageClient {
 
@@ -22,6 +21,9 @@ export class ValaLanguageClient {
     constructor(context: ExtensionContext) {
 
         let serverModule = this.getLanguageServerPath()
+             || which.sync('vala-language-server', { nothrow: true })
+             || which.sync('gvls', { nothrow: true })
+
         if (serverModule == null)
             return;
 
