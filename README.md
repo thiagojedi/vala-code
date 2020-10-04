@@ -1,3 +1,9 @@
+# DEPRECATED
+
+Use the [vala extension](https://marketplace.visualstudio.com/items?itemName=prince781.vala)
+
+-----
+
 # Vala Code
 ## Vala Language Support for Visual Studio Code 
 
